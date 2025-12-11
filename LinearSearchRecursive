@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int linearSearch(int n, int* arr, int x, int i)
+{
+	if (i > n)
+		return i;
+	else if (i <= n && arr[i] == x)
+		return i;
+	else
+		linearSearch(n, arr, x, i + 1);
+}
+
+int main()
+{
+	setlocale(0, "");
+
+	int arr[]{ 3,5,7,2,1 };
+	int x = 1;
+	int i = 0;
+	int n = 5;
+
+	cout << linearSearch(n, arr, x, i) << endl;
+
+	return 0;
+}
